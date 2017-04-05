@@ -17,3 +17,14 @@ pre
 {
 	background-color: #f9f2f4;
 }
+
+ul li
+{
+	list-style-type: circle;
+}
+
+.module ol
+{
+	margin-left: 0px;
+	padding-left: 20px;
+}

@@ -145,5 +145,11 @@ h6,
 
 pre
 {
+	margin-left: 20px;
 	background-color: #f9f2f4;
+}
+
+ul, ol
+{
+	padding-left: 20px;
 }

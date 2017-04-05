@@ -1,0 +1,98 @@
+@media screen and (max-width:425px)
+{
+	.icon-link-div
+	{
+		text-align: center;
+	}
+	body
+	{
+		font-size:16px;
+	}
+}
+
+.jumbotron
+{
+	margin-top: 53px;
+}
+
+.icon-logo
+{
+	fill: #2C3E50;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: logo-ani 4s infinite;
+	-webkit-transition: -webkit-transform 0.5s;
+}
+
+@-webkit-keyframes logo-ani
+{
+	0% {fill: #2C3E50;}
+	50% {fill:#BDC3C7;}
+	100% {fill: #2C3E50;}
+}
+
+.icon-logo:hover
+{
+	-webkit-animation-play-state: paused;
+	-webkit-transform: scale(1.1, 1.1);
+}
+
+
+.tile
+{
+	font-size:18px;
+}
+
+.icon-link
+{
+	margin: 23px 10px 0px 10px;
+	fill: #BDC3C7;
+	width: 50px;
+	height: 50px;
+}
+
+.icon-link:hover
+{
+	fill: #2C3E50;
+}
+
+.icon-blog-li
+{
+	vertical-align: middle;
+	fill: #BDC3C7;
+	width: 20px;
+	height: 20px;
+}
+
+.blog-li 
+{
+	font-size:18px;
+	padding: 0px;
+}
+
+.blog-li li
+{
+	list-style-type:none;
+}
+
+.blog-div-grid
+{
+	font-size: 24px;
+	padding: 30px;
+}
+
+
+.blog-grid a
+{
+	color: white;
+}
+
+.icon-blog-div 
+{
+	vertical-align: middle;
+	fill:white;
+	width:30px;
+	height:30px;
+}
+
+

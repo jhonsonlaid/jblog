@@ -1,0 +1,16 @@
+{% load staticfiles %}
+{% load custom_markdown %}
+{% extend base_bootstrap.html %}
+<head>
+<link rel="stylesheet" style="text/css" href="{%static "/css/pastie.css"%}">
+<link rel="stylesheet" style="text/css" href="{%static "/css/markdown-css-themes/markdown4.css"%}">
+
+<head>
+{% for post in posts %}
+    <h2> {{ post.title }} </h2>
+    <p> {{ post.timestamp }} </p>
+    <!--<p> {{ post.body }} </p>-->
+   {{post.content|custom_markdown}}  
+{% endfor %}
+
+

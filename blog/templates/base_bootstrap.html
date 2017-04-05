@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-cn">
+  <head>
+	<meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="baidu-site-verification" content="hk1qQMJebZ" /> 
+	<title>Jhonsonlai's Blog</title>
+    <link rel="icon" href="{% static "/img/logo/logo_lg.ico" %}">
+	<!--
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	-->
+    <link rel="stylesheet" style="text/css" href="{%static "/css/code/friendly.css" %}">
+    <link rel="stylesheet" href="{%static "/css/bootstrap/3.3.7/bootstrap.min.css" %}">  
+    <link rel="stylesheet" style="text/css" href="{%static "/css/flat-ui/flat-ui.css" %}">
+    <link rel="stylesheet" style="text/css" href="{%static "/css/self/jblog.css" %}">
+	<!--
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	-->
+	
+  </head>
+
+<body>
+
+<header class="navbar-inverse navbar-fixed-top"  role="navigation">
+<div class="container">
+<nav>
+  <div class="container-fluid">
+    <div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="{%url "home" %}">JHONSONLAI</a>
+    </div>
+		
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+			<li class="active"><a id="navbar-blog-a" href="{%url "home" %}">Blog</a></li>
+            <li ><a href="#">Collection</a></li>
+            <li ><a href="#">Gallery</a></li>
+            <li ><a href="#">Project</a></li>
+        </ul>
+    </div>
+	</div>
+</nav>
+</div>
+</header>
+
+<div class="jumbotron masthead">
+  <div class="container">
+    <div class = "row">
+        <div class="col-md-2 text-center">
+			<a href="{%url "detail" category="python" id="1"%}">
+				<svg  version="1.0" class="icon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8000 8000" preserveAspectRatio="xMidYMid meet">
+					<path d="M3675 6659 c-133 -16 -355 -64 -365 -79 -3 -4 -27 -15 -55 -23 -81 -25 -158 -56 -164 -66 -3 -5 -41 -24 -84 -42 -43 -19 -86 -41 -95 -49 -19 -17 -107 -71 -134 -82 -10 -4 -18 -12 -18 -17 0 -5 -24 -25 -54 -45 -30 -20 -56 -39 -58 -44 -1 -4 -25 -25 -53 -47 -86 -70 -280 -273 -331 -348 -13 -19 -27 -37 -31 -39 -5 -1 -23 -26 -41 -54 -18 -28 -42 -62 -53 -75 -12 -13 -32 -45 -45 -70 -13 -26 -30 -53 -37 -61 -8 -8 -32 -50 -53 -94 -21 -43 -42 -82 -46 -85 -14 -9 -51 -112 -52 -143 -1 -27 4 -31 74 -60 41 -17 77 -34 80 -37 8 -10 62 -34 108 -49 40 -12 44 -12 62 8 11 12 20 25 20 30 0 13 71 166 80 172 4 3 24 38 45 78 21 39 42 72 47 72 5 0 7 4 3 9 -3 6 0 13 8 18 7 4 28 32 46 61 18 28 36 52 40 52 3 1 22 24 41 52 19 28 56 71 83 96 26 25 47 51 47 58 0 7 6 17 14 21 8 4 46 37 85 72 88 79 190 161 200 161 4 0 23 14 41 30 18 17 37 30 42 30 5 0 38 18 75 40 64 39 178 90 201 90 7 0 12 4 12 9 0 16 235 81 295 81 13 0 25 5 27 12 3 9 66 13 236 16 l232 4 0 174 0 174 -202 -1 c-112 -1 -234 -5 -273 -10z"/>
+					 <path d="M4300 5570 l0 -570 520 0 520 0 0 425 0 425 255 0 255 0 0 -140 0 -140 145 0 145 0 0 285 0 285 -920 0 -920 0 0 -570z m750 5 l0 -275 -230 0 -230 0 0 275 0 275 230 0 230 0 0 -275z"/>
+					 <path d="M5850 5150 l0 -150 145 0 145 0 0 150 0 150 -145 0 -145 0 0 -150z"/>
+					 <path d="M1810 3865 l0 -425 -275 0 -275 0 0 415 0 415 -565 0 -565 0 0 -145 0 -145 280 0 280 0 0 -700 0 -700 285 0 285 0 0 285 0 285 1535 0 1535 0 0 420 0 420 250 0 250 0 0 -420 0 -420 1495 0 1495 0 0 570 0 570 -145 0 -145 0 0 -425 0 -425 -230 0 -230 0 0 425 0 425 -695 0 -695 0 0 -425 0 -425 -280 0 -280 0 0 425 0 425 -540 0 -540 0 0 -425 0 -425 -270 0 -270 0 0 425 0 425 -845 0 -845 0 0 -425z m1120 -150 l0 -275 -275 0 -275 0 0 275 0 275 275 0 275 0 0 -275z m3570 0 l0 -275 -265 0 -265 0 0 275 0 275 265 0 265 0 0 -275z"/>
+					 <path d="M7475 2384 c-1 -134 -5 -208 -12 -212 -5 -4 -14 -34 -17 -67 -10 -84 -67 -319 -79 -326 -5 -4 -6 -12 -3 -18 4 -6 3 -11 -3 -11 -5 0 -16 -21 -24 -47 -28 -89 -49 -138 -60 -145 -7 -4 -7 -8 -2 -8 6 0 6 -3 0 -8 -6 -4 -26 -41 -45 -82 -18 -41 -37 -77 -42 -78 -4 -2 -5 -9 -1 -15 8 -13 -48 27 -118 85 -26 21 -52 38 -58 38 -5 0 -15 9 -21 20 -6 11 -28 31 -49 44 -21 14 -73 59 -115 100 -42 42 -81 76 -85 76 -5 0 -23 17 -41 38 -89 102 -138 157 -162 180 -16 14 -28 30 -28 37 0 6 -14 26 -31 43 -35 35 -61 76 -86 135 -9 20 -20 37 -25 37 -5 0 -6 5 -3 10 3 6 2 10 -4 10 -19 0 -44 116 -49 233 l-5 117 -173 0 -174 0 0 -143 c0 -138 14 -257 30 -257 5 0 6 -9 3 -20 -3 -11 -1 -20 5 -20 6 0 14 -10 17 -22 13 -44 59 -143 71 -153 7 -5 25 -34 40 -62 15 -29 32 -53 36 -53 5 0 22 -23 39 -50 17 -28 40 -57 52 -65 12 -8 18 -15 13 -15 -15 0 278 -309 293 -310 3 -1 40 -32 81 -70 41 -38 80 -70 87 -70 7 0 17 -8 22 -18 5 -10 30 -31 56 -47 25 -16 52 -40 60 -52 9 -13 20 -23 26 -23 6 0 45 -26 87 -58 42 -33 92 -67 110 -76 17 -9 32 -20 32 -25 0 -4 12 -14 28 -22 15 -7 46 -26 69 -41 58 -39 77 -36 113 15 16 23 34 48 40 54 6 7 8 13 4 13 -4 0 2 9 13 19 11 11 30 40 43 65 12 25 26 46 31 46 6 0 8 4 4 9 -3 6 0 13 8 18 7 4 28 42 46 83 18 41 36 77 41 80 8 6 55 112 65 147 3 13 12 29 19 35 10 11 49 125 82 238 3 14 10 27 13 30 9 7 38 129 56 235 30 184 43 431 29 553 l-7 52 -171 0 -171 0 0 -206z"/>
+				</svg>
+			</a>
+        </div>
+        <div class="col-md-2 icon-link-div">
+            <a href="https://github.com/jhonsonlaid">
+				<svg class="icon-link" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"/>
+				</svg>
+			</a>
+			<a href="http://weibo.com/2188137122/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">
+				<svg class="icon-link" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M6.72 13.532c-2.647.26-4.934-.936-5.106-2.675C1.442 9.12 3.45 7.497 6.1 7.235c2.648-.262 4.934.935 5.106 2.674.172 1.738-1.836 3.36-4.485 3.622zm-.697-2.066c-.256.41-.804.588-1.218.4-.407-.186-.527-.66-.27-1.06.252-.396.783-.573 1.193-.4.415.175.547.647.295 1.06zm.845-1.083c-.093.158-.298.234-.458.168-.158-.064-.208-.24-.118-.397.092-.154.29-.23.447-.167.16.058.216.237.128.397zm.118-1.81c-1.26-.328-2.685.3-3.233 1.41-.557 1.134-.018 2.39 1.255 2.802 1.32.426 2.874-.226 3.415-1.45.533-1.194-.133-2.425-1.437-2.762zm5.033-.814c-.226-.068-.38-.114-.263-.41.256-.643.282-1.197.005-1.593-.52-.742-1.94-.702-3.57-.02 0 0-.51.224-.38-.182.25-.805.213-1.48-.177-1.87-.884-.884-3.234.034-5.25 2.05C.876 7.242 0 8.842 0 10.224c0 2.647 3.393 4.255 6.713 4.255 4.35 0 7.246-2.528 7.246-4.535 0-1.213-1.023-1.9-1.94-2.186zm1.275-3.386c-.51-.568-1.266-.783-1.964-.635-.284.06-.465.34-.404.625.06.284.34.467.625.405.342-.072.71.033.962.31.25.278.317.656.21.987-.09.277.062.575.34.665.277.088.574-.063.663-.34.22-.678.083-1.45-.43-2.018zm1.614-1.457c-1.052-1.165-2.602-1.61-4.033-1.304-.33.07-.542.396-.47.727.07.33.395.542.726.47 1.018-.215 2.12.1 2.866.928.746.828.948 1.957.63 2.946-.106.323.07.668.393.772.322.104.667-.072.772-.394V7.06c.448-1.392.165-2.98-.886-4.143z"/></svg>
+			</a>
+		</div>
+		<div class="col-md-8 text-center">
+			<h3 style="font-size: 32px;"><i id="greeting-sentence">Have you seen gentle wind in the willows</i></h3>
+        </div>
+    </div>
+        </img>
+    </div>
+</div>
+<div class="container">
+	<div class="row blog-grid text-center">
+		{%block blog-category-grid%}
+		{%endblock%}
+	</div>
+    <div class="row">
+        <div class="col-md-3">
+			{%block blog-category%} 
+			{%endblock%}
+        </div>
+
+        <div class="col-md-9">
+            {%block content%}
+            {%endblock%}
+        </div>
+</div>
+
+</body>
+	<script src="{%static "/js/jquery/2.1.1/jquery.min.js" %}"></script>
+	<script src="{%static "/js/bootstrap/3.3.7/bootstrap.min.js" %}"></script>
+	<script src="{%static "/js/flat-ui/flat-ui.min.js" %}"></script>
+	<script src="{%static "/js/self/jblog.js" %}"></script>
+</html>

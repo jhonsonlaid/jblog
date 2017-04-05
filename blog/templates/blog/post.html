@@ -1,0 +1,37 @@
+{% extends "base_bootstrap.html" %}
+{% load staticfiles %}
+{% load custom_markdown %}
+<head>
+<!-- CSS -->
+</head>
+
+{%block blog-category%}
+<ul class="nav cate-list blog-li">
+
+</ul>
+{%endblock%}
+
+{% block content%}
+<ol class="breadcrumb">
+	<li><a href="{%url "home" %}">Blog</a></li>
+	<li><a href="{%url "category" post.tag%}">{{ post.tag }}</a></li>
+    <li class="active">{{ post.title }}</li>
+</ol>
+
+<div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">{{ post.title }}</h2>
+
+                    <p class="post-meta">
+                        Time:  <a class="post-time" href="#">{{ post.timestamp }}</a> 
+                    </p>
+            </header>
+                <div class="post-description">
+                    <p>
+                     {{ post.content|custom_markdown }}
+                    </p>
+                </div>
+        </section>
+</div><!-- /.blog-post -->
+{% endblock %}

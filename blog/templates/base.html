@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+{% load staticfiles %}
+{% load custom_markdown %}
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>Jhonsonlai Blog</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+    <link rel="stylesheet" style="text/css" href="{%static "/css/pastie.css"%}">
+    <link rel="stylesheet" style="text/css" href="{%static "/css/flat-ui/flat-ui.css"%}">
+</head>
+<body>
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">Jhonsonlai Blog</h1>
+            <nav class="nav inverse">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="#">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="#">Weibo</a>
+                    </li>
+                </ul>
+	
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            {% block content %}
+            {% endblock %}
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="http://www.jhonsonlai.com/blog/2/">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <script src="{%static js/flat-ui/flat-ui.min.js}"></script>
+</body>
+</html>

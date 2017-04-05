@@ -1,0 +1,34 @@
+{% extends "base_bootstrap.html" %}
+
+{%block blog-category%}
+<ul class="nav blog-li cate-list">
+</ul>
+{%endblock%}
+
+{% block content %}
+<div class="posts">
+    {% for post in post_list %}
+        <section class="post-list">
+            <header class="post-header tile">
+				<a href="{% url "detail" category=post.tag id=post.id %}">
+					<div class="row text-left">
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-8">
+							{{ post.title }}
+						</div>
+						<div class="col-md-3">
+							<small>{{ post.timestamp }}</small>
+						</div>
+					</div>
+				</a>
+            </header>
+
+                <div class="post-description">
+                    <p>
+                    </p>
+                </div>
+        </section>
+    {% endfor %}
+</div><!-- /.blog-post -->
+{% endblock %}

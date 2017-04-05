@@ -1,0 +1,364 @@
+@media screen and (max-width:425px)
+{
+	.icon-link-div
+	{
+		text-align: center;
+	}
+	body
+	{
+		font-size:16px;
+	}
+}
+
+.jumbotron
+{
+	margin-top: 53px;
+}
+
+.icon-logo
+{
+	fill: #2C3E50;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: logo-ani 4s infinite;
+	-webkit-transition: -webkit-transform 0.5s;
+}
+
+@-webkit-keyframes logo-ani
+{
+	0% {fill: #2C3E50;}
+	50% {fill:#BDC3C7;}
+	100% {fill: #2C3E50;}
+}
+
+.icon-logo:hover
+{
+	-webkit-animation-play-state: paused;
+	-webkit-transform: scale(1.1, 1.1);
+}
+
+
+.tile
+{
+	font-size:18px;
+}
+
+.icon-link
+{
+	margin: 23px 10px 0px 10px;
+	fill: #BDC3C7;
+	width: 50px;
+	height: 50px;
+}
+.icon-link:hover
+{
+	fill: #2C3E50;
+}
+
+
+.icon-blog-li
+{
+	vertical-align: middle;
+	fill: #BDC3C7;
+	width: 20px;
+	height: 20px;
+}
+.blog-li 
+{
+	font-size:18px;
+	padding: 0px;
+}
+
+.blog-li li
+{
+	list-style-type:none;
+}
+.blog-li li.active
+{
+	background-color: #27AE60;
+}
+
+.blog-li li:hover svg
+{
+	fill: #27AE60;
+}
+
+.blog-li li:hover a
+{
+	color: #27AE60;
+}
+
+.blog-li li.active a
+{
+	color: white;
+}
+
+.blog-li li.active svg
+{
+	fill: white;
+}
+
+
+/*
+#python.active
+{
+	background-color:#2C3E50;
+}
+
+#python:hover svg 
+{
+	fill: #2C3E50;
+}
+
+#python:hover a
+{
+	color: #2C3E50;
+}
+
+#django.active
+{
+	background-color:#003366;
+}
+
+#django:hover svg 
+{
+	fill: #003366;
+}
+
+#django:hover a
+{
+	color: #003366;
+}
+
+#machine-learning.active
+{
+	background-color:#333366;
+}
+
+#machine-learning:hover svg 
+{
+	fill: #333366;
+}
+
+#machine-learning:hover a
+{
+	color: #333366;
+}
+
+#git.active
+{
+	background-color:#006633;
+}
+
+#git:hover svg 
+{
+	fill: #006633;
+}
+
+#git:hover a
+{
+	color: #006633;
+}
+
+#web-design.active
+{
+	background-color:#006699;
+}
+
+#web-design:hover svg 
+{
+	fill: #006699;
+}
+
+#web-design:hover a
+{
+	color: #006699;
+}
+
+#web-spider.active
+{
+	background-color:#666699;
+}
+
+#web-spider:hover svg 
+{
+	fill: #666699;
+}
+
+#web-spider:hover a
+{
+	color: #666699;
+}
+*/
+.blog-div-grid
+{
+	font-size: 24px;
+	padding: 30px;
+}
+
+
+.blog-grid a
+{
+	color: white;
+}
+/*
+.python-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+.python-grid
+{
+	background-color: #2C3E50;
+}
+
+.python-grid:hover
+{
+	fill: #2C3E50;
+	background-color: #ECF0F1;
+}
+
+a:hover .python-grid
+{
+	color: #2C3E50;
+}
+
+.python-grid:hover svg
+{
+	fill: #2C3E50;
+}
+
+.django-grid
+{
+	background-color: #003366;
+}
+
+.django-grid:hover
+{
+	background-color: #ECF0F1;
+}
+
+.django-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+a:hover .django-grid
+{
+	color: #003366;
+}
+
+.django-grid:hover svg
+{
+	fill: #003366;
+}
+
+.machine-learning-grid
+{
+	background-color: #333366;
+}
+
+.machine-learning-grid:hover
+{
+	background-color: #ECF0F1;
+}
+
+.machine-learning-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+a:hover .machine-learning-grid
+{
+	color: #333366;
+}
+
+
+.machine-learning-grid:hover svg
+{
+	fill: #333366;
+}
+
+.git-grid
+{
+	background-color: #006633;
+}
+
+.git-grid:hover
+{
+	background-color: #ECF0F1;
+}
+
+.git-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+a:hover .git-grid
+{
+	color: #006633;
+}
+
+.git-grid:hover svg
+{
+	fill: #006633;
+}
+
+.web-spider-grid
+{
+	background-color: #666699;
+}
+
+.web-spider-grid:hover
+{
+	background-color: #ECF0F1;
+}
+
+.web-spider-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+a:hover .web-spider-grid
+{
+	color: #666699;
+}
+
+.web-spider-grid:hover svg
+{
+	fill: #666699;
+}
+.web-design-grid
+{
+	background-color: #006699;
+}
+
+.web-design-grid:hover
+{
+	background-color: #ECF0F1;
+}
+
+.web-design-grid-out
+{
+	margin: 10px 0px 20px 0px;
+}
+
+a:hover .web-design-grid
+{
+	color: #006699;
+}
+
+.web-design-grid:hover svg
+{
+	fill: #006699;
+}
+*/
+.icon-blog-div
+{
+	vertical-align: middle;
+	fill:white;
+	width:30px;
+	height:30px;
+}
+
+

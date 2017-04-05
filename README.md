@@ -11,7 +11,7 @@ You can visit my blog by <http://www.jhonsonlai.com> to learn more.
 
 ## Quick start
 
-###Dependencies
+### Dependencies
 1. Something you should install
   * python 2.7
   * django: `pip install django`
@@ -26,9 +26,15 @@ You can visit my blog by <http://www.jhonsonlai.com> to learn more.
   * flat-ui
   * [pygments-css](https://github.com/richleland/pygments-css)
 
-###Run
+### Run
 1. git clone: `git clone git@github.com:jhonsonlaid/jblog.git`
 2. turn to jblog root directory,run `python manage.py runserver 0.0.0.0:8000` and type `http://localhost:8000` in browser.
+
+### Edit
+If you like to edit this blog to create your own, what you should change mainly in:
+* `blog/templates/`(control the html page layout and content)
+* `static/js/self/jblog.js`(allowed to change the category color and add category`)
+* `static/css/self/jblog.css`(change document element style)
  
 
  

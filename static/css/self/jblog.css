@@ -6,7 +6,7 @@
 	}
 	body
 	{
-		font-size:14px;
+		font-size:12px;
 	}
 }
 
@@ -100,46 +100,49 @@
 	margin-right: 10px;
 }
 
-
+body, p
+{
+	font-size: 14px;
+}
 h1,
 .h1
 {
-	font-size: 32px;
+	font-size: 28px;
 	margin-bottom: 10px;
 }
 
 h2,
 .h2
 {
-	font-size: 28px;
+	font-size: 22px;
 	margin-bottom: 5px;
 }
 
 h3,
 .h3
 {
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 5px;
 }
 
 h4,
 .h4
 {
-	font-size: 22px;
+	font-size: 18px;
 	margin-bottom: 5px;
 }
 
 h5,
 .h5
 {
-	font-size: 20px;
+	font-size: 16px;
 	margin-bottom: 3px;
 }
 
 h6,
 .h6
 {
-	font-size: 18px;
+	font-size: 14px;
 	margin-bottom: 3px;
 }
 

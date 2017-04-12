@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'markdownx',
+    'gallery',
 ]
 
 MIDDLEWARE = [
@@ -143,7 +144,7 @@ MARKDOWNX_MEDIA_PATH = 'media/markdownx/img' # Path, where images will be stored
 # Image
 MARKDOWNX_UPLOAD_MAX_SIZE = 52428800 # 50MB - maximum file size
 MARKDOWNX_UPLOAD_CONTENT_TYPES = ['image/jpeg', 'image/png', 'image/svg+xml'] # Acceptable file content types
-MARKDOWNX_IMAGE_MAX_SIZE = {'size': (800, 500), 'quality': 100,} # Different options describing final image processing: size, compression etc. See below for more info. Dimensions are not applied to SVG files.
+MARKDOWNX_IMAGE_MAX_SIZE = {'size': (2048, 2048), 'quality': 100,} # Different options describing final image processing: size, compression etc. See below for more info. Dimensions are not applied to SVG files.
 
 # Editor
 MARKDOWNX_EDITOR_RESIZABLE = True # Update editor's height to inner content height while typing

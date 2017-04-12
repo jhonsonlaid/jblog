@@ -1,0 +1,22 @@
+.gallery img
+{
+	max-width: 300px;
+	max-height: 400px;
+	border-radius: 20px;
+	opacity: 0.6;
+}
+
+.gallery img:hover
+{
+	opacity: 1.0;
+}
+
+.gallery p
+{
+	margin-bottom: 0px;
+}
+
+.gallery
+{
+	text-align: center;
+}

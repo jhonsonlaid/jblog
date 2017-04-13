@@ -85,10 +85,13 @@
 	    <section class="post-lists">
 			{% for cover in post_covers %}
 				<a data-toggle="modal" href= "#{{ cover.id }}">
-					<div class="col-md-4 gallery">
-						{{ cover.cover | custom_markdown}}
-						{{ cover.title }}
-						{{ cover.timestamp }}
+					<div class="col-md-4">
+						<div class="gallery-table">
+							{{ cover.cover | custom_markdown}}
+							<hr>
+							{{ cover.short_title }}
+							{{ cover.timestamp }}
+						</div>
 					</div>
 				</a>
 

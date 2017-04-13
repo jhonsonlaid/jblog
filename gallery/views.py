@@ -13,6 +13,7 @@ def gallery_home(request):
 	for post in post_list:
 		cover = {}
 		cover['cover'] = post.content.split('\n')[0]
+		cover['short_title'] = post.title[:10]+"... "
 		cover['title'] = post.title
 		cover['timestamp'] = post.timestamp
 		cover['id'] = post.id

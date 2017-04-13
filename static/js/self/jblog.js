@@ -115,7 +115,7 @@ for (var i=0; i<category_type.length; ++i)
 
 function mover_post_list(post, color)
 {
-	console.log("color: ", color);
+	//console.log("color: ", color);
 	post.getElementsByTagName("a")[0].style.color = color;
 }
 

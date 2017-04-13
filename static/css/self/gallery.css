@@ -58,7 +58,7 @@ hr
 	max-width: 420px;
 	margin: 10px 0px 0px 10px;
 	border-radius: 20px;
-	box-shadow: 0px 5px 15px 0px #888888;
+	box-shadow: 0px 6px 12px 0px #888888;
 	text-align: center
 }
 
@@ -67,4 +67,7 @@ hr
 	margin: 0px;
 }
 
-
+.jumbotron
+{
+	padding-bottom: 11px;
+}

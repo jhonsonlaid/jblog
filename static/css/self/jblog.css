@@ -152,7 +152,7 @@ pre
 	background-color: #f9f2f4;
 }
 
-ul, ol
+.blog-content ul, ol
 {
 	margin-left: 20px;
 	padding-left: 10px;

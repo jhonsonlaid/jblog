@@ -1,22 +1,73 @@
-.gallery img
+.gallery-table
+{
+	background-color: #CCFFCC;
+	padding: 10px;
+	max-width: 320px;
+	margin: 10px 0px 0px 10px;
+	border-radius: 20px;
+	box-shadow: 0px 5px 15px 0px #888888;
+	text-align: center
+}
+
+hr
+{
+	margin: 10px 0px;
+}
+
+.gallery-table img
 {
 	max-width: 300px;
 	max-height: 400px;
+	opacity: 0.8;
 	border-radius: 20px;
-	opacity: 0.6;
 }
 
-.gallery img:hover
+.gallery-table img:hover
 {
 	opacity: 1.0;
 }
 
-.gallery p
+.gallery-table p
 {
 	margin-bottom: 0px;
 }
 
-.gallery
+.gallery-table
 {
 	text-align: center;
+}
+
+.modal-gallery
+{
+	background-color: #FFF;
+	margin-top: 55px;
+}
+
+.gallery-cell img
+{
+	max-width: 400px;
+	max-height: 600px;
+	border-radius: 20px;
+}
+.gallery-cell
+{
+	background-color: #CCFFCC;
+	color: #34495E;
+	font-weight: 500;
+	padding: 10px;
+	max-width: 420px;
+	margin: 10px 0px 0px 10px;
+	border-radius: 20px;
+	box-shadow: 0px 6px 12px 0px #888888;
+	text-align: center
+}
+
+.gallery-cell p
+{
+	margin: 0px;
+}
+
+.jumbotron
+{
+	padding-bottom: 11px;
 }

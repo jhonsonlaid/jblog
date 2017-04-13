@@ -6,14 +6,14 @@
 </head>
 
 {%block blog-category%}
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=16a085&w=260&t=tt&d=MIrK5J9XEBQeSLwSab9TV4SKM-5EM1ksFrqkv5lhl1c&co=eeeeee&ct=16a085&cmo=30cc3a&cmn=ffbb00'></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=16a085&w=262&t=tt&d=MIrK5J9XEBQeSLwSab9TV4SKM-5EM1ksFrqkv5lhl1c&co=eeeeee&ct=16a085&cmo=30cc3a&cmn=ffbb00'></script>
 <ul class="nav cate-list blog-li">
 </ul>
 {%endblock%}
 
 {% block content%}
 <ol class="breadcrumb">
-	<li><a href="{%url "home" %}">Blog</a></li>
+	<li><a href="{%url "blog_home" %}">Blog</a></li>
 	<li><a href="{%url "category" post.tag%}">{{ post.tag }}</a></li>
     <li class="active">{{ post.title }}</li>
 </ol>

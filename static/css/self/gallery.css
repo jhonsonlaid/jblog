@@ -20,3 +20,34 @@
 {
 	text-align: center;
 }
+
+.modal-gallery img
+{
+	max-width: 300px;
+	max-height: 400px;
+	border-radius: 20px;
+}
+
+.modal-gallery
+{
+	background-color: #FFF;
+	margin-top: 55px;
+}
+
+.gallery-cell
+{
+	background-color: #CCFFCC;
+	color: #34495E;
+	padding: 10px 0px 10px 0px;
+	max-width: 320px;
+	margin: 10px 0px 0px 10px;
+	border-radius: 20px;
+	text-align: center
+}
+
+.gallery-cell p
+{
+	margin: 0px;
+}
+
+

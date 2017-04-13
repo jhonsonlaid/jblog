@@ -36,15 +36,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="{%url "home" %}">JHONSONLAI</a>
+	  <a class="navbar-brand" href="{%url "blog_home" %}">JHONSONLAI</a>
     </div>
 		
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-			<li ><a id="navbar-blog-a" href="{%url "home" %}">Blog</a></li>
-            <li ><a href="#">Collection</a></li>
-			<li class="active"><a href="{%url "home" %}">Gallery</a></li>
-            <li ><a href="#">Project</a></li>
+			<li ><a id="navbar-blog-a" href="{%url "blog_home" %}">Blog</a></li>
+			<li class="active"><a href="{%url "gallery_home" %}">Gallery</a></li>
         </ul>
     </div>
 	</div>
@@ -84,23 +82,50 @@
 </div>
 <div class="container">
 	<div class="posts">
-	    {% for post in post_list %}
-	        <section class="post-list">
-				<a href="#">
+	    <section class="post-lists">
+			{% for cover in post_covers %}
+				<a data-toggle="modal" href= "#{{ cover.id }}">
 					<div class="col-md-4 gallery">
-						{{ post.content | custom_markdown}}
-						{{ post.title }}
-						{{ post.timestamp }}
+						{{ cover.cover | custom_markdown}}
+						{{ cover.title }}
+						{{ cover.timestamp }}
 					</div>
 				</a>
-	        </section>
-	    {% endfor %}
+
+				<div id="{{ cover.id }}" class="modal fade row" tabindex="-1" role="dialog">
+					<div class="col-md-2">
+					</div>
+    				<div class="col-md-8 modal-gallery">
+    				    <div class="modal-header">
+    				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">{{ cover.title }}</h4>
+    				    </div>
+    				    <div class="modal-body row">
+							{% for img in cover.img %}
+							<div class="col-md-6">
+								<div class="gallery-cell">
+									{{ img.path | custom_markdown }}
+									{{ img.disc}}
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+    				    <div class="modal-footer">
+							{{ cover.timestamp }}
+    				    </div>
+    				</div><!-- /.modal-content -->
+					<div class="col-md-2">
+					</div>
+				</div><!-- /.modal -->
+			{% endfor %}
+
+			
+	    </section>
 	</div><!-- /.gallery-post -->
 </div>
 
 </body>
 	<script src="{%static "/js/jquery/2.1.1/jquery.min.js" %}"></script>
 	<script src="{%static "/js/bootstrap/3.3.7/bootstrap.min.js" %}"></script>
-	<script src="{%static "/js/flat-ui/flat-ui.min.js" %}"></script>
-	<script src="{%static "/js/self/jblog.js" %}"></script>
+	<script src="{%static "/js/self/gallery.js" %}"></script>
 </html>

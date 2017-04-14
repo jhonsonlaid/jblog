@@ -76,10 +76,10 @@
 </div>
 <div class="container">
 	<div class="posts">
-	    <section class="post-lists">
+	    <section class="post-lists gallery-grid">
 			{% for cover in post_covers %}
-				<a data-toggle="modal" href= "#{{ cover.id }}">
-					<div class="col-md-4">
+				<a data-toggle="modal" href= "#gallery_post{{ cover.id }}">
+					<div class="gallery-grid-item">
 						<div class="gallery-table">
 							{{ cover.cover | custom_markdown}}
 							<hr>
@@ -89,29 +89,29 @@
 					</div>
 				</a>
 
-				<div id="{{ cover.id }}" class="modal fade row" tabindex="-1" role="dialog">
-					<div class="col-md-2">
+				<div id="gallery_post{{ cover.id }}" class=" modal fade row" tabindex="-1">
+					<div class="col-md-1">
 					</div>
-    				<div class="col-md-8 modal-gallery">
+    				<div class="col-md-10 modal-gallery">
     				    <div class="modal-header">
     				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 							<h4 class="modal-title">{{ cover.title }}</h4>
     				    </div>
     				    <div class="modal-body row">
+							<div class="gallery-in-grid">
 							{% for img in cover.img %}
-							<div class="col-md-6">
-								<div class="gallery-cell">
+								<div class="gallery-cell gallery-in-grid-item">
 									{{ img.path | custom_markdown }}
 									{{ img.disc}}
 								</div>
-							</div>
 							{% endfor %}
+							</div>
 						</div>
     				    <div class="modal-footer">
 							{{ cover.timestamp }}
     				    </div>
     				</div><!-- /.modal-content -->
-					<div class="col-md-2">
+					<div class="col-md-1">
 					</div>
 				</div><!-- /.modal -->
 			{% endfor %}
@@ -123,6 +123,7 @@
 
 </body>
 	<script src="{%static "/js/jquery/2.1.1/jquery.min.js" %}"></script>
+	<script src="{%static "/js/masonry/masonry.pkgd.min.js" %}"></script>
 	<script src="{%static "/js/bootstrap/3.3.7/bootstrap.min.js" %}"></script>
 	<script src="{%static "/js/self/gallery.js" %}"></script>
 </html>

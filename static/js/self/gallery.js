@@ -21,3 +21,15 @@ for(var i=0; i<img_table.length; ++i)
 	img_table[i].style.backgroundColor = back_color_list[color_index];
 }
 
+$('.gallery-grid').masonry({
+	itemSelector: '.gallery-grid-item',
+	columnWidth: 340
+});
+
+$('.gallery-in-grid').on('mouseenter', function(){
+	$grid = $('.gallery-in-grid').masonry({
+			itemSelector: '.gallery-in-grid-item',
+			columnWidth: 440
+		});
+});
+

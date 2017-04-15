@@ -24,6 +24,7 @@ You can visit my blog by <http://www.jhonsonlai.com> to learn more.
   * bootstrap 3.3.7
   * jquery 2.2.1
   * flat-ui
+  * [masonry](http://masonry.desandro.com)
   * [pygments-css](https://github.com/richleland/pygments-css)
 
 ### Run

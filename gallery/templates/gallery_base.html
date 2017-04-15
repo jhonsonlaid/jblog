@@ -78,7 +78,7 @@
 	<div class="posts">
 	    <section class="post-lists gallery-grid">
 			{% for cover in post_covers %}
-				<a data-toggle="modal" href= "#gallery_post{{ cover.id }}">
+				<a data-toggle="modal" class="modal-link" href= "#gallery_post{{ cover.id }}">
 					<div class="gallery-grid-item">
 						<div class="gallery-table">
 							{{ cover.cover | custom_markdown}}
@@ -99,12 +99,8 @@
     				    </div>
     				    <div class="modal-body row">
 							<div class="gallery-in-grid">
-							{% for img in cover.img %}
-								<div class="gallery-cell gallery-in-grid-item">
-									{{ img.path | custom_markdown }}
-									{{ img.disc}}
+								<div class="gallery-in-grid-item">
 								</div>
-							{% endfor %}
 							</div>
 						</div>
     				    <div class="modal-footer">
@@ -126,4 +122,13 @@
 	<script src="{%static "/js/masonry/masonry.pkgd.min.js" %}"></script>
 	<script src="{%static "/js/bootstrap/3.3.7/bootstrap.min.js" %}"></script>
 	<script src="{%static "/js/self/gallery.js" %}"></script>
+	<script>
+	var img_modal = {{img_dict|safe}};
+
+//$('.gallery-in-grid').on('mouseenter', function(){
+//	$grid = $('.gallery-in-grid').masonry({
+//			itemSelector: '.gallery-in-grid-item',
+//			columnWidth: 440
+//		});
+	</script>
 </html>

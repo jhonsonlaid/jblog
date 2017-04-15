@@ -26,10 +26,41 @@ $('.gallery-grid').masonry({
 	columnWidth: 340
 });
 
+$('.modal-link').on("click", function(){
+
+	for(var i=0; i<img_modal.length; ++i)
+	{
+		var id = "#gallery_post" + img_modal[i].id;
+		var click_id = $(this).attr('href'); 
+		// console.log(id ,img_modal[i].id);
+		if(id == click_id)
+		{
+			var img_list = img_modal[i].img;
+			for(var j=0; j<img_list.length; j++)
+			{
+				img_path = img_list[j].path.match('\]\(.+\)')[0];
+				//delete '](' and ')'
+				img_path = img_path.substr(2, img_path.length-3);
+				//console.log(img_path);
+
+				div_content = '<div class="gallery-cell gallery-in-grid-item">'
+				img_content = '<img src="' + img_path + '">';
+				$items = $(div_content + img_content + '</div>');
+
+$(id + ' .gallery-in-grid').masonry({
+		itemSelector: '.gallery-in-grid-item',
+		columnWidth: 440
+	});
+				$(id + ' .gallery-in-grid').append($items).masonry('appended', $items);
+				//console.log(img_content);
+			}
+		}
+	}
+});
+
 $('.gallery-in-grid').on('mouseenter', function(){
 	$grid = $('.gallery-in-grid').masonry({
 			itemSelector: '.gallery-in-grid-item',
 			columnWidth: 440
 		});
 });
-

@@ -45,7 +45,8 @@ $('.modal-link').on("click", function(){
 
 				div_content = '<div class="gallery-cell gallery-in-grid-item">'
 				img_content = '<img src="' + img_path + '">';
-				$items = $(div_content + img_content + '</div>');
+				img_disc = img_list[j].disc;
+				$items = $(div_content + img_content + img_disc + '</div>');
 
 $(id + ' .gallery-in-grid').masonry({
 		itemSelector: '.gallery-in-grid-item',

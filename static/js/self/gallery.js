@@ -26,7 +26,7 @@ $('.gallery-grid').masonry({
 	columnWidth: 340
 });
 
-$('.modal-link').on("click", function(){
+$('.modal-link').one("click", function(){
 
 	for(var i=0; i<img_modal.length; ++i)
 	{
@@ -48,10 +48,11 @@ $('.modal-link').on("click", function(){
 				img_disc = img_list[j].disc;
 				$items = $(div_content + img_content + img_disc + '</div>');
 
-$(id + ' .gallery-in-grid').masonry({
-		itemSelector: '.gallery-in-grid-item',
-		columnWidth: 440
-	});
+				$(id + ' .gallery-in-grid').masonry({
+						itemSelector: '.gallery-in-grid-item',
+						columnWidth: 440
+					});
+
 				$(id + ' .gallery-in-grid').append($items).masonry('appended', $items);
 				//console.log(img_content);
 			}

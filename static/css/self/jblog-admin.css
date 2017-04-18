@@ -8,6 +8,12 @@
 	float: none;
 }
 
+.colM .aligned .vLargeTextField
+{
+	width: 49%;
+	height: 60px;
+}
+
 textarea
 {
 	width: 100%;
@@ -28,3 +34,12 @@ ul li
 	margin-left: 0px;
 	padding-left: 20px;
 }
+
+p img
+{
+	margin: 10px;
+	max-width: 280px;
+}
+
+
+

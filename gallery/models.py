@@ -4,14 +4,14 @@ from django.db import models
 from django.contrib import admin
 from markdownx.models import MarkdownxField
 from markdownx.widgets import AdminMarkdownxWidget
-import datetime
+import django.utils.timezone as timezone
 from django.utils.encoding import python_2_unicode_compatible
 
 @python_2_unicode_compatible
 class GalleryPost(models.Model):
-	title = models.CharField(max_length=150)
+	title = models.TextField()
 	content = MarkdownxField()
-	timestamp = models.DateField()
+	timestamp = models.DateField(default=timezone.now)
 	id = models.AutoField(primary_key=True)
 
 	def __str__(self):

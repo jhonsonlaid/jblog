@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from django.template import loader,Context
+from django.template import loader, Context
 from django.http import HttpResponse
 from blog.models import BlogPost
 from django.http import Http404
 
 # Create your views here.
+
 
 def home(request):
     post_list = BlogPost.objects.all()[:5]
@@ -12,7 +13,9 @@ def home(request):
     c = Context({'post_list': post_list})
     return HttpResponse(t.render(c))
 
-#category in url while tag in database
+# category in url while tag in database
+
+
 def blog_category(request, category):
     category = category.split("+")
     post_list = BlogPost.objects.filter(tag__contains=category[0])
@@ -22,10 +25,11 @@ def blog_category(request, category):
     c = Context({'post_list': post_list})
     return HttpResponse(t.render(c))
 
-def detail(request,category,id):
+
+def detail(request, category, id):
     try:
         post = BlogPost.objects.filter(tag__contains=category)
         post = post.get(id=str(id))
     except BlogPost.DoesNotExist:
         raise Http404
-    return render(request, 'blog/post.html', {'post':post})
+    return render(request, 'blog/post.html', {'post': post})

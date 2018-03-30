@@ -29,8 +29,9 @@ def gallery_home(request):
             img_info = {}
             img_info['path'] = img_content
             disc = re.match(r'!\[.*\]', img_content)
-            img_info['disc'] = disc.group()[2:-1]
-            img_list.append(img_info)
+            if disc:
+                img_info['disc'] = disc.group()[2:-1]
+                img_list.append(img_info)
 
         cover['img'] = img_list
         img_dict['img'] = img_list

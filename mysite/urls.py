@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/',include('blog.urls')), 
     url(r'^gallery/',include('gallery.urls')), 
+    url(r'^jp3/',include('jp3.urls')), 
     url(r'^$', blog_views.home),
     url(r'^markdownx/', include('markdownx.urls')),
 ]

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'markdownx',
     'gallery',
+    'jp3',
 ]
 
 MIDDLEWARE = [

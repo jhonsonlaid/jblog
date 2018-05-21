@@ -11,6 +11,8 @@ import json
 
 def gallery_home(request):
     post_list = GalleryPost.objects.all()
+    post_list = post_list.order_by('timestamp')
+    post_list = post_list.reverse()
     post_covers = []
     img_modal = []
 
